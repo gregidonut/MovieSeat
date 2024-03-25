@@ -1,0 +1,87 @@
+#layout > header {
+    background: #44475a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+}
+
+#layout > main {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+#form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    gap: 0.2rem;
+
+    background: #44475a;
+    padding: 8rem 3rem;
+    border-radius: 2rem;
+    border: #6272A4 solid .5rem;
+}
+
+.form-control {
+    display: grid;
+    grid-template-columns: 10rem 1fr;
+    grid-template-rows: auto auto;
+    align-items: center;
+}
+
+.form-control label {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+    /*justify-self: end;*/
+    padding-right: 0.5rem;
+
+    font-size: 1.2rem;
+    text-align: right; /* Align text to the right */
+    /*white-space: nowrap; !* Prevent text from wrapping *!*/
+    overflow: hidden; /* Hide overflowing text */
+    text-overflow: ellipsis; /* Display ellipsis for overflowing text */
+}
+
+.form-control input {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+}
+
+.form-control ul {
+    grid-column: 1 / span 2;
+    grid-row: 2 / span 1;
+    justify-self: end;
+    font-size: 1rem;
+    padding-bottom: 0.3rem;
+
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    flex-direction: column;
+
+    /*display: none;*/
+}
+
+.invalid {
+    border-color: #ff5555;
+    background-color: #ff79c6;
+}
+.valid {
+    border-color: #50fa7b;
+    background-color: #8be9fd;
+}
+.error-messages {
+    color: #ff5555;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding-top: 0.2rem;
+    /*margin-bottom: 1rem;*/
+}
